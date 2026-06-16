@@ -1,0 +1,51 @@
+> For the complete documentation index, see [llms.txt](https://www.osdcloud.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://www.osdcloud.com/features.md).
+
+# Features
+
+New features are added to OSDCloud on a monthly basis and presented at Recast's monthly Right Click Tools Release Show
+
+{% embed url="<https://www.recastsoftware.com/resources/right-click-tools-release-show/>" %}
+
+## OSDCloud Features
+
+A new version of OSDCloud was released in the [OSDCloud PowerShell Module](https://www.powershellgallery.com/packages/OSDCloud/), also known as "OSDCloud v2". This version uses a new engine for OS Deployment backed by a Task Sequence.
+
+To ensure you have the latest requirements, use [OSDCloud Live](/osdcloud-live/about.md). A new tool for creating OSDCloud ready boot images will be released in the near future.
+
+The following table details the new features that are added to OSDCloud and the required version of the [OSDCloud PowerShell Module](https://www.powershellgallery.com/packages/OSDCloud/). OSDCloud Editions are used to detail the availability of the feature. Editions will be expanded upon starting in **May 2026**.
+
+<table><thead><tr><th width="283.666748046875">Feature</th><th width="218.238037109375">OSDCloud Module Version</th><th>OSDCloud Edition</th></tr></thead><tbody><tr><td><a href="/pages/WRQq0IZzPXieB4UrHjBU"><strong>Apply OOB Drivers to WinOS</strong></a></td><td>25.3.27.1</td><td>Community, Insiders</td></tr><tr><td><a href="/pages/ypwsJbDPphUhmvmrNG7z"><strong>Apply OOB Drivers to WinRE</strong></a></td><td>25.9.30.3</td><td>Insiders</td></tr><tr><td><a href="/pages/dg3tEv9ItKRap4kpRvfI"><strong>DateTime Internet Sync</strong></a></td><td>26.3.4.2</td><td>Insiders</td></tr><tr><td><a href="/pages/oKi4249WuKktjDFJWycY"><strong>External Logs</strong></a></td><td>26.3.4.2</td><td>Insiders</td></tr><tr><td><a href="/pages/gPI4IlmnyQXb60cl4o51"><strong>OS Catalog Raw Format</strong></a></td><td>26.3.4.2</td><td>Community, Insiders</td></tr><tr><td><a href="/pages/QieSoBJDfKbyDSLnCLYo"><strong>DriverPack Catalog Raw Format</strong></a></td><td>26.3.4.2</td><td>Community, Insiders</td></tr><tr><td><a href="/pages/twy2GYaX6YlKcsayo2Pk"><strong>DriverPack Catalog Auto-Update</strong></a></td><td>26.3.4.2</td><td>Insiders</td></tr><tr><td><a href="/pages/b5AoLI6e7PSjVg8W72Sl"><strong>DriverPack Visible Release Date</strong></a></td><td>26.3.4.2</td><td>Community, Insiders</td></tr></tbody></table>
+
+## OSDCloud (Legacy) Features
+
+The following table details features in OSDCloud (Legacy) in the [OSD PowerShell Module](https://www.powershellgallery.com/packages/OSD/), also known as "**OSDCloud v1**". Some features of OSDCloud (Legacy) are in review or not planned to be released in the [OSDCloud PowerShell Module](https://www.powershellgallery.com/packages/OSDCloud/). If you have a requirement for any of these features, please submit a Recast Software [Feature Request](https://www.recastsoftware.com/feature-requests/).
+
+| Feature                     | OSDCloud Module Version |
+| --------------------------- | ----------------------- |
+| **Azure Deployment**        | In Review               |
+| **Command Line Deployment** | In Review               |
+| **Custom WIM Deployment**   | In Review               |
+| **Mounted ISO Deployment**  | In Review               |
+| **Automate Scripts**        | Not Planned             |
+| **OSDCloud Templates**      | Not Planned             |
+| **OSDCloud Workspace**      | Not Planned             |
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter:
+
+```
+GET https://www.osdcloud.com/features.md?ask=<question>
+```
+
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

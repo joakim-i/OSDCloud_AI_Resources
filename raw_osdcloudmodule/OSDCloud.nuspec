@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>OSDCloud</id>
+    <version>26.5.24.1</version>
+    <authors>David Segura</authors>
+    <owners>Recast Software</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/OSDeploy/OSDCloud/blob/main/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/OSDeploy/OSDCloud</projectUrl>
+    <description>OSDCloud PowerShell Module for OS Deployment in the Cloud.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>(c) 2026 Recast Software. All rights reserved.</copyright>
+    <tags>OSDeploy OSD OSDCloud OSDWorkspace Recast PSModule PSIncludes_Function PSFunction_Deploy-OSDCloud PSFunction_Get-OSDCloudModulePath PSFunction_Get-OSDCloudModuleVersion PSFunction_Show-OSDCloudDeviceInfo PSFunction_Invoke-WinPEStartup PSFunction_Invoke-WinPEStartupManager PSFunction_Show-WinPEStartupDevices PSFunction_Show-WinPEStartupDeviceErrors PSFunction_Show-WinPEStartupIpconfig PSFunction_Show-WinPEStartupWifi PSFunction_Update-WinPEStartupModule PSFunction_Start-OSDCloudExplorer PSCommand_Deploy-OSDCloud PSCommand_Get-OSDCloudModulePath PSCommand_Get-OSDCloudModuleVersion PSCommand_Show-OSDCloudDeviceInfo PSCommand_Invoke-WinPEStartup PSCommand_Invoke-WinPEStartupManager PSCommand_Show-WinPEStartupDevices PSCommand_Show-WinPEStartupDeviceErrors PSCommand_Show-WinPEStartupIpconfig PSCommand_Show-WinPEStartupWifi PSCommand_Update-WinPEStartupModule PSCommand_Start-OSDCloudExplorer PSCommand_Invoke-OSDCloudPEStartup PSCommand_Invoke-OSDCloudWifi PSCommand_OSDCloudExplorer PSCommand_Show-PEStartupDeviceInfo PSCommand_Show-PEStartupHardware PSCommand_Show-PEStartupErrors PSCommand_Show-PEStartupIpconfig PSCommand_Show-PEStartupWifi PSCommand_Use-PEStartupUpdateModule</tags>
+  </metadata>
+</package>

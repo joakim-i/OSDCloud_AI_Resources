@@ -1,0 +1,9 @@
+{
+	"servers": {
+		"OSDCloud by Recast": {
+			"url": "https://www.osdcloud.com/~gitbook/mcp",
+			"type": "http"
+		}
+	},
+	"inputs": []
+}

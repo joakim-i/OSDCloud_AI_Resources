@@ -1,0 +1,45 @@
+> For the complete documentation index, see [llms.txt](https://www.osdcloud.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://www.osdcloud.com/osdcloud-v1/recycle-bin/blob-sas-url.md).
+
+# Blob SAS URL
+
+The easiest way to access a WIM for OSDCloud is to create a SAS Token and URL.  This will append the URL of the WIM file with a Token and allow the download the Windows Image without assigning specific permissions
+
+![](/files/ceu496ud12wpMSBBrlBW)
+
+If you are using a Blob SAS URL then you can use this with Start-OSDCloud, but this method is not recommended as it is not easy to remember and must be written down, or saved in a file
+
+```powershell
+Start-OSDCloud -ImageFileUrl 'https://azosdcloud.blob.core.windows.net/images/en-us_windows_10_enterprise_ltsc_2021_x64.wim?sp=r&st=2022-05-10T08:04:24Z&se=2022-05-10T16:04:24Z&spr=https&sv=2020-08-04&sr=b&sig=YHVowsGk%2FhBGqFkkZ1vkQXmra9'
+```
+
+## Reference
+
+{% embed url="<https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview>" %}
+
+{% embed url="<https://docs.microsoft.com/en-us/azure/storage/blobs/sas-service-create?tabs=dotnet>" %}
+
+## Sponsor
+
+{% embed url="<https://www.recastsoftware.com/?utm_source=osdeploy&utm_medium=ad&utm_campaign=web>" %}
+OSDeploy is sponsored by Recast Software
+{% endembed %}
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter:
+
+```
+GET https://www.osdcloud.com/osdcloud-v1/recycle-bin/blob-sas-url.md?ask=<question>
+```
+
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

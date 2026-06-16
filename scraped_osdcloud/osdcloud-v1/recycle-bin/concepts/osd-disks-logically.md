@@ -1,0 +1,123 @@
+> For the complete documentation index, see [llms.txt](https://www.osdcloud.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://www.osdcloud.com/osdcloud-v1/recycle-bin/concepts/osd-disks-logically.md).
+
+# OSD Disks Logically
+
+So today I had a Twitter exchange with my good friend Sune about Disks and I thought I would share with the Community my logic behind Disks, and why OSDCloud is so **kick ass** when handling Disks
+
+So my exchange with Sune had to do with systems that had Multiple Disks, and if the prompts can be removed so its just a **`Clear-Disk -Number 0`**
+
+{% embed url="<https://twitter.com/SuneThomsenDK/status/1379909495736913921>" %}
+
+{% embed url="<https://twitter.com/SeguraOSD/status/1379911115531038720>" %}
+
+## In the OSDCloud Context
+
+In the context of OSDCloud, this is what we are talking about.  In this example, I have two disks, and when Clear-Disk is processed, I have to confirm each of them separately (or by pressing \[A] Yes to All)
+
+This step is literally 1 key press away from ZTI ... but is it better?
+
+![](/files/-MXiywu-ylAmgOr6vdTV)
+
+## ZTI (Zero Touch) Advantages
+
+Here are a few advantages for ZTI in OSDCloud at this time ... it's important to put these in perspective because in my opinion, they are not very big at all
+
+### Time Savings
+
+OSDCloud is not MDT or CM.  Once you are in WinPE, there is literally a minute of options (less if you put in the params) before it takes off and goes.  I've had OSDCloud take less than 4 minutes in WinPE, and that is without Zero Touch.  That said, its stupid to look at ZTI as a time saver.  At best, this will be measured somewhere between 5-20 seconds of time savings, much of this is also due to the fact I am throwing a Warning about Clear-Disk for the newbs.  This is not a good reason at all for OSDCloud ZTI, there is pretty much no gain
+
+### Consistency
+
+Any time you trade off Selecting (whether Parameter or Menu), and have people involved, mistakes can happen.  Running OSDCloud ZTI will ensure that every deployment is configured identically (assuming you like the defaults, or you remembered to put in the proper parameters).  That said, this is the only clear benefit of OSDCloud ZTI over OSDCloud (UDI)
+
+### Automation
+
+This is in the cards for OSDCloud in the near term, but not today.  I have yet to be asked where OSDCloud is going ... and what's in my head ... maybe MMS Miami will have an answer
+
+## The Multiple Disk Problem
+
+This is the showstopper that has yet to be properly addressed and automated, and it's often overlooked by many CM / Intune Admins, but it is very well known to most Desktop Technicians that have deployed more than a few computers.  Occasionally you will run into a computer with multiple disks.  So which do we need to pick as the OSDisk?
+
+### Disk 0
+
+***Let's ALWAYS make Disk 0 the OSDisk***
+
+This is the Admin answer.  I'd like to think that it's because they don't know any better.  For the people that do know better, this is the Lazy answer since it requires the LEAST amount of work.  In most cases, **Disk 0 should be the right answer, but it is not 100% right in all cases**
+
+If you look at Sune's tweet above again, at least he knows its "usually" Disk 0, but this also means he knows that sometimes it's not Disk 0.  This is where we run into problems
+
+What if I clean Disk 0, so now I have Disk 1 with an OS, and I'm now installing an OS on Disk 0.  This is a good reason to clear all disks.  The other reason?  Drive letters we need are in use.  So OSDCloud forces you to eject any connected USB drives BEFORE running the Disk actions!  Problem solved.  Finally, this prevents any mistakes I have in OSDCloud from destroying your USB Drive
+
+### Largest Disk
+
+This is another answer that clearly wasn't thought out.  If a computer has two disks, then you have a split between OS and DATA.  If there is going to be a significant amount of DATA, then the largest disk should be the DATA disk, not the OS
+
+### Smallest Disk
+
+This is clearly a better choice for the OS, but this won't be true in all cases, especially if it is a slow disk
+
+### Fastest Disk
+
+Bingo!  The fastest disk should be the OSDisk, but what if it's also the largest, leaving a small DATA disk?
+
+## The Hardware Problem
+
+Not all hardware is equal, especially when mixing NVMe, PCIe, mSATA, and SATA.  I didn't mention IDE because that's on really old hardware that won't be discussed in the context of Windows 10
+
+I can recall a few years ago I had a Dell Mobile workstation that had 1 mSATA slot, and 2 SATA slots.  For this configuration, I had a 256GB mSATA for my OS, and 2 x 1TB SSD's in my SATA slots.  The only problem was that Disk 0 and 1 were SATA, while my mSATA was 3.  Obviously when I have my Task Sequence set for Disk 0, this won't work.
+
+## OSDCloud Concepts
+
+This is something that hasn't been discussed before, but since Sune opened the door, I'll detail how much logic went into OSDCloud's disk processing
+
+### Clear-Disk
+
+This step happens early in the OSDCloud process and I have taken thorough steps to ensure that everything is accurate.  As you can see in the image below, this is an entirely different function called **`Clear-Disk.fixed`**.  This will only present the Fixed Disks, nothing else.  Additionally you can also see the **`BusType`** which I had added as a Property from Get-PhysicalDisk.  Finally the Size in GB is clearly presented.  This table is shown before even receiving a confirmation to Clear the Disk so you are aware of what is going to happen.
+
+Next, you are presented with a confirmation to Clear-Disk with the Disk clearly identified.  This happens for each Fixed Disk.  Sune's question of just wiping Disk 0 is not logical in the scope of OSDCloud.  It is not an Upgrade.  It is intended to provide a clean, pristine OS.  So yes, all Disks should be cleaned, but you have the ultimate control.  You can say No, but that's not recommended, or ideal (and New-OSDisk won't let you get any further anyway)
+
+The image below shows the process with two Fixed Disks present, something that most of you probably haven't seen, but if you do have multiple disks, this is how it will look
+
+![](/files/-MXk85712m2PJqpa9nj5)
+
+### New-OSDisk
+
+Normally in this process, if you have a single Fixed Disk, there are no prompts.  OSDCloud knows that when there is only one Fixed Disk, there is no need to ask where you want to install the OS.  The magic happens when there is more than one Fixed Disk ... you will be prompted to select the OSDisk.  We are in the world of UEFI, there is no need to pick Disk 0.  Pick the one that works best in your system
+
+![](/files/-MXk8N_I5bND3NNkview)
+
+Here's a look at a two similar functions, Select-Disk.fixed and Select-Disk.usb.  You can see that these functions were created specifically for OSDCloud to provide the most needed information for you to make a proper selection
+
+![](/files/-MXjUkv5-WcvOxQt8wmx)
+
+Finally, you should see that the SizeGB I present in OSDCloud is not traditional for Disks, but by presenting the Size in base 1000 vs base 1024, the SizeGB clearly matches with the size in the FriendlyName.  This is also helpful to avoid confusion for those that don't understand how these are calculated
+
+![](/files/-MXjVlijr9em2YvbsXZh)
+
+## Conclusion
+
+I hope you can see that a considerable amount of thought went into how OSDCloud works with Disks, and this didn't even discuss the Partitioning that I am doing.  While I am open to suggestions to improve OSDCloud, it may be more helpful for me to explain why I am doing things a certain way
+
+There are some lessons to learn from in this Concept.  For starters, if you are deploying an OS, be considerate about multiple disks, and don't assume Disk 0 is the only choice.  Your Hardware Inventory can clearly tell you systems that have multiple disks, so put those in a separate collection
+
+In my opinion, the OS should be on the FASTEST and SMALLEST Disk (256 - 500GB is ideal).  What are your thoughts?
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter:
+
+```
+GET https://www.osdcloud.com/osdcloud-v1/recycle-bin/concepts/osd-disks-logically.md?ask=<question>
+```
+
+The question should be specific, self-contained, and written in natural language.
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
