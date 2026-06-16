@@ -1,0 +1,214 @@
+```json
+{
+  "generated": "2026-06-16T09:22:03Z",
+  "source": "https://www.osdcloud.com/osdcloud-v1",
+  "total_documents": 14,
+  "categories": {
+    "Transformation": 5,
+    "Setup": 3,
+    "Deployment": 3,
+    "Automation": 1,
+    "Integration": 1,
+    "Advanced Deployment": 1
+  },
+  "version": "OSD 23.5.21.1+",
+  "transformation_documents": [
+    {
+   
+    "id": "T01",
+      "title": "OSDCloud Workspace Architecture and Transformations",
+      "filename": 
+"transformation_docs/T01_OSDCloud_Workspace_Architecture_and_Transformations.md",
+      "metadata_file": "json_metadata/T01_metadata.json",
+      "category": "Transformation",
+      "doc_type": "architecture_reference",
+      "topics": ["workspace structure", "template derivation", "directory layout", "Media partition", "staging locations"],
+      "size_estimate": "large"
+    },
+    {
+      "id": "T02",
+      "title": "Edit-OSDCloudWinPE Complete Transformation Reference",
+      "filename": "transformation_docs/T02_Edit-OSDCloudWinPE_Complete_Transformation_Reference.md",
+  
+     "metadata_file": "json_metadata/T02_metadata.json",
+      "category": "Transformation",
+      "doc_type": "transformation_reference",
+      "topics": ["startup flow", "PowerShell configuration", "network stack", "Wi-Fi enablement", "driver injection", "registry modifications", "autostart", "branding", "logging"],
+      "size_estimate": "very large"
+    },
+    {
+      "id": "T03",
+      "title": "WinPE Boot Flow Before and After OSDCloud",
+      "filename": 
+"transformation_docs/T03_WinPE_Boot_Flow_Before_and_After_OSDCloud.md",
+      "metadata_file": "json_metadata/T03_metadata.json",
+      "category": "Transformation",
+   
+    "doc_type": "comparison_analysis",
+      "topics": ["boot sequence", "network initialization timing", "critical path", "performance comparison"],
+      "size_estimate": "medium"
+    },
+    {
+      "id": "T04",
+      "title": "MDT Implementation Mapping for OSDCloud Transformations",
+      "filename": 
+"transformation_docs/T04_MDT_Implementation_Mapping_for_OSDCloud_Transformations.md",
+      "metadata_file": "json_metadata/T04_metadata.json",
+      "category": "Transformation",
+      "doc_type": "implementation_guide",
+      "topics": ["MDT equivalents", "deployment share configuration", "Extra Files", "Bootstrap.ini", "CustomSettings.ini", "implicit behaviors"],
+  
+     "size_estimate": "very large"
+    },
+    {
+      "id": "T05",
+      "title": "Deterministic Transformation Tables",
+      "filename": "transformation_docs/T05_Deterministic_Transformation_Tables.md",
+      "metadata_file": "json_metadata/T05_metadata.json",
+      "category": "Transformation",
+      "doc_type": "reference_tables",
+      "topics": ["file modifications", "registry changes", "boot flow", "network enablement", "driver injection", "directory mapping"],
+      "size_estimate": "large"
+    }
+  ],
+  "original_documents": [
+    {
+    
+   "id": "01",
+      "title": "OSDCloud v1 - Local Setup",
+      "filename": "markdown_chunks/01_OSDCloud_v1_Local_Setup.md",
+      "metadata_file": "json_metadata/01_metadata.json",
+      "source_url": "https://www.osdcloud.com/osdcloud-v1/osdcloud/setup",
+      "category": "Setup",
+      "doc_type": "setup_guide",
+      "topics": ["prerequisites", "ADK installation", "OSD module", "environment preparation"],
+      "size_estimate": "medium"
+    },
+    {
+      "id": "02",
+      "title": "OSDCloud v1 - OSDCloud Template",
+     
+  "filename": "markdown_chunks/02_OSDCloud_v1_OSDCloud_Template.md",
+      "metadata_file": "json_metadata/02_metadata.json",
+      "source_url": "https://www.osdcloud.com/osdcloud-v1/osdcloud/template",
+      "category": "Setup",
+      "doc_type": "setup_guide",
+      "topics": ["template creation", "template management", "New-OSDCloudTemplate"],
+      "size_estimate": "small"
+    },
+    {
+      "id": "03",
+      "title": "OSDCloud v1 - OSDCloud Workspace",
+      "filename": "markdown_chunks/03_OSDCloud_v1_OSDCloud_Workspace.md",
+      "metadata_file": "json_metadata/03_metadata.json",
+      "source_url": "https://www.osdcloud.com/osdcloud-v1/osdcloud/workspace",
+     
+  "category": "Setup",
+      "doc_type": "setup_guide",
+      "topics": ["workspace creation", "New-OSDCloudWorkspace", "ISO generation"],
+      "size_estimate": "small"
+    },
+    {
+      "id": "04",
+      "title": "OSDCloud v1 - Start-OSDCloudGUI",
+      "filename": "markdown_chunks/04_OSDCloud_v1_Start_OSDCloudGUI.md",
+      "metadata_file": "json_metadata/04_metadata.json",
+      "source_url": "https://www.osdcloud.com/osdcloud-v1/osdcloud/start-osdcloudgui",
+      "category": "Deployment",
+      "doc_type": "command_reference",
+      "topics": ["GUI deployment", "OS selection", "DriverPacks", "760+ OS combinations"],
+      "size_estimate": "large"
+    },
+    {
+      "id": "05",
+      "title": "OSDCloud v1 - Start-OSDCloud",
+      "filename": "markdown_chunks/05_OSDCloud_v1_Start_OSDCloud.md",
+      "metadata_file": "json_metadata/05_metadata.json",
+      "source_url": "https://www.osdcloud.com/osdcloud-v1/osdcloud/start-osdcloud",
+      "category": "Deployment",
+      "doc_type": "command_reference",
+      "topics": ["CLI deployment", "parameters", "OSName", "OSEdition", "OSLanguage"],
+      "size_estimate": "small"
+    },
+    {
+     
+  "id": "06",
+      "title": "OSDCloud v1 - Start-OSDCloud Wrapping and Variables",
+      "filename": 
+"markdown_chunks/06_OSDCloud_v1_Start_OSDCloud_Wrapping_and_Variables.md",
+      "metadata_file": "json_metadata/06_metadata.json",
+      "source_url": "https://www.osdcloud.com/osdcloud-v1/osdcloud/wrapping",
+      "category": "Advanced Deployment",
+      "doc_type": "advanced_guide",
+      "topics": ["wrapper scripts", "variables", "customization", "hardware-specific logic"],
+      "size_estimate": "medium"
+    },
+    {
+      "id": "07",
+      "title": "OSDCloud v1 - First Boot and DriverPacks",
+  
+     "filename": "markdown_chunks/07_OSDCloud_v1_First_Boot_and_DriverPacks.md",
+      "metadata_file": "json_metadata/07_metadata.json",
+      "source_url": "https://www.osdcloud.com/osdcloud-v1/osdcloud/firstboot",
+      "category": "Deployment",
+      "doc_type": "process_guide",
+      "topics": ["DriverPacks", "Dell", "HP", "Lenovo", "Surface", "first boot process"],
+      "size_estimate": "medium"
+    },
+    {
+      "id": "08",
+      "title": "OSDCloud v1 - OSDCloud Automate Autopilot and Provisioning",
+      "filename": 
+"markdown_chunks/08_OSDCloud_v1_OSDCloud_Automate_Autopilot_and_Provisioning.md",
+      "metadata_file": "json_metadata/08_metadata.json",
+   
+    "source_url": "https://www.osdcloud.com/osdcloud-v1/osdcloud/automate",
+      "category": "Automation",
+      "doc_type": "automation_guide",
+      "topics": ["Autopilot", "provisioning packages", "PPKG", "zero-touch", "Start-OSDCloudGUI.json"],
+      "size_estimate": "large"
+    },
+    {
+      "id": "09",
+      "title": "OSDCloud v1 - Integration with MDT and ADK",
+      "filename": 
+"markdown_chunks/09_OSDCloud_v1_Integration_with_MDT_and_ADK.md",
+      "metadata_file": "json_metadata/09_metadata.json",
+      "source_url": "https://www.osdcloud.com/osdcloud-v1/osdcloud/mdt",
+      "category": "Integration",
+      
+ "doc_type": "integration_guide",
+      "topics": ["MDT", "ADK", "boot.wim", "deployment share", "WinRE", "DaRT"],
+      "size_estimate": "medium"
+    }
+  ],
+  "combined_documents": [
+    {
+      "title": "OSDCloud v1 Complete Documentation",
+      "filename": "combined_docs/OSDCloud_v1_Complete_Documentation.md",
+      "description": "All 9 original OSDCloud v1 documentation files combined with table of contents",
+      "includes": ["01", "02", "03", "04", "05", "06", "07", "08", "09"]
+    },
+    {
+      "title": "OSDCloud Transformations Complete",
+      "filename": "combined_docs/OSDCloud_Transformations_Complete.md",
+      "description": "All 5 transformation-focused documentation files combined with table of contents",
+      "includes": ["T01", "T02", "T03", "T04", "T05"]
+    }
+  ],
+  "indices": [
+    {
+      "filename": "document_index.json",
+      "description": "Index of 9 original OSDCloud v1 documentation files"
+    },
+    {
+      "filename": "transformation_index.json",
+      "description": "Index of 5 transformation-focused documentation files"
+    
+ },
+    {
+      "filename": "complete_index.json",
+      "description": "Master index of all 14 documents (this file)"
+    }
+  ]
+}

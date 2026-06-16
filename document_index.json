@@ -1,0 +1,126 @@
+{
+  "generated": "2026-06-16T09:22:03Z",
+  "source": "https://www.osdcloud.com/osdcloud-v1",
+  "total_documents": 9,
+  "categories": ["Setup", "Deployment", "Automation", "Integration", "Advanced Deployment"],
+  "version": "OSD 23.5.21.1+",
+  "documents": [
+    {
+      "id": "01",
+      "title": "OSDCloud v1 - Local Setup",
+      "filename": "01_OSDCloud_v1_Local_Setup.md",
+      "metadata_file": "01_metadata.json",
+      "source_url": "https://www.osdcloud.com/osdcloud-v1/osdcloud/setup",
+      "last_updated": "May 21, 2023",
+  
+     "category": "Setup",
+      "section_path": "OSDCloud v1 > OSDCloud > Local Setup",
+      "doc_type": "setup_guide",
+      "topics": ["prerequisites", "ADK installation", "OSD PowerShell module", "DaRT", "MDT integration"]
+    },
+    {
+      "id": "02",
+      "title": "OSDCloud v1 - OSDCloud Template",
+      "filename": "02_OSDCloud_v1_OSDCloud_Template.md",
+      "metadata_file": "02_metadata.json",
+      "source_url": "https://www.osdcloud.com/osdcloud-v1/osdcloud/template",
+      "last_updated": "May 21, 2023",
+    
+   "category": "Setup",
+      "section_path": "OSDCloud v1 > OSDCloud > Template",
+      "doc_type": "setup_guide",
+      "topics": ["New-OSDCloudTemplate", "template creation", "WinRE"]
+    },
+    {
+      "id": "03",
+      "title": "OSDCloud v1 - OSDCloud Workspace",
+      "filename": "03_OSDCloud_v1_OSDCloud_Workspace.md",
+      "metadata_file": "03_metadata.json",
+      "source_url": "https://www.osdcloud.com/osdcloud-v1/osdcloud/workspace",
+      "last_updated": "May 21, 2023",
+      "category": "Setup",
+     
+  "section_path": "OSDCloud v1 > OSDCloud > Workspace",
+      "doc_type": "setup_guide",
+      "topics": ["New-OSDCloudWorkspace", "workspace creation", "ISO generation", "USB media"]
+    },
+    {
+      "id": "04",
+      "title": "OSDCloud v1 - Start-OSDCloudGUI",
+      "filename": "04_OSDCloud_v1_Start_OSDCloudGUI.md",
+      "metadata_file": "04_metadata.json",
+      "source_url": "https://www.osdcloud.com/osdcloud-v1/osdcloud/start-osdcloudgui",
+      "last_updated": "May 21, 2023",
+      "category": "Deployment",
+      "section_path": "OSDCloud v1 > OSDCloud > Start-OSDCloudGUI",
+      "doc_type": "command_reference",
+      "topics": ["GUI deployment", "OS selection", "DriverPacks", "Microsoft Update Catalog", "760+ OS combinations"]
+    },
+    {
+      "id": "05",
+      "title": "OSDCloud v1 - Start-OSDCloud",
+      "filename": "05_OSDCloud_v1_Start_OSDCloud.md",
+      "metadata_file": "05_metadata.json",
+      "source_url": "https://www.osdcloud.com/osdcloud-v1/osdcloud/start-osdcloud",
+      "last_updated": "May 21, 2023",
+      "category": "Deployment",
+      "section_path": "OSDCloud v1 > OSDCloud > Start-OSDCloud",
+ 
+      "doc_type": "command_reference",
+      "topics": ["CLI deployment", "OSName", "OSEdition", "OSLanguage", "OSLicense", "parameters"]
+    },
+    {
+      "id": "06",
+      "title": "OSDCloud v1 - Start-OSDCloud Wrapping and Variables",
+      "filename": "06_OSDCloud_v1_Start_OSDCloud_Wrapping_and_Variables.md",
+      "metadata_file": "06_metadata.json",
+      "source_url": "https://www.osdcloud.com/osdcloud-v1/osdcloud/wrapping",
+      "last_updated": "May 21, 2023",
+      "category": "Advanced Deployment",
+      "section_path": "OSDCloud v1 > OSDCloud > Wrapping and Variables",
+ 
+      "doc_type": "advanced_guide",
+      "topics": ["wrapper scripts", "variables", "customization", "hardware detection", "130+ variables"]
+    },
+    {
+      "id": "07",
+      "title": "OSDCloud v1 - First Boot and DriverPacks",
+      "filename": "07_OSDCloud_v1_First_Boot_and_DriverPacks.md",
+      "metadata_file": "07_metadata.json",
+      "source_url": "https://www.osdcloud.com/osdcloud-v1/osdcloud/firstboot",
+      "last_updated": "May 21, 2023",
+      "category": "Deployment",
+      "section_path": "OSDCloud v1 > OSDCloud > First Boot",
+  
+     "doc_type": "process_guide",
+      "topics": ["DriverPacks", "Dell", "HP", "Lenovo", "Surface", "first boot process", "C:\\Drivers"]
+    },
+    {
+      "id": "08",
+      "title": "OSDCloud v1 - OSDCloud Automate Autopilot and Provisioning",
+      "filename": 
+"08_OSDCloud_v1_OSDCloud_Automate_Autopilot_and_Provisioning.md",
+      "metadata_file": "08_metadata.json",
+      "source_url": "https://www.osdcloud.com/osdcloud-v1/osdcloud/automate",
+      "last_updated": "May 21, 2023",
+      "category": "Automation",
+      "section_path": "OSDCloud v1 > OSDCloud > Automate",
+  
+     "doc_type": "automation_guide",
+      "topics": ["Autopilot", "AutopilotConfigurationFile.json", "Provisioning Packages", "PPKG", "Start-OSDCloudGUI.json", "zero-touch"]
+    },
+    {
+      "id": "09",
+      "title": "OSDCloud v1 - Integration with MDT and ADK",
+      "filename": "09_OSDCloud_v1_Integration_with_MDT_and_ADK.md",
+      "metadata_file": "09_metadata.json",
+      "source_url": "https://www.osdcloud.com/osdcloud-v1/osdcloud/mdt",
+      "last_updated": "May 21, 2023",
+      "category": "Integration",
+      "section_path": "OSDCloud v1 > OSDCloud > MDT and ADK",
+  
+     "doc_type": "integration_guide",
+      "topics": ["MDT", "Microsoft Deployment Toolkit", "ADK", "boot.wim", "WinRE", "DaRT"]
+    }
+  ]
+}

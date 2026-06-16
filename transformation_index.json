@@ -1,0 +1,190 @@
+{
+  "generated": "2026-06-16T09:22:03Z",
+  "source": "https://www.osdcloud.com/osdcloud-v1",
+  "total_documents": 5,
+  "category": "Transformation",
+  "version": "OSD 23.5.21.1+",
+  "description": "Deep technical documentation explaining OSDCloud Workspace and Edit-OSDCloudWinPE transformations for AI-implementable MDT/ADK replication",
+  "documents": [
+    {
+      "id": "T01",
+      "title": "OSDCloud Workspace Architecture and Transformations",
+      "filename": "T01_OSDCloud_Workspace_Architecture_and_Transformations.md",
+   
+    "metadata_file": "T01_metadata.json",
+      "section_path": "OSDCloud v1 > Transformations > Workspace Architecture",
+      "doc_type": "architecture_reference",
+      "topics": [
+        "workspace structure",
+        "template derivation",
+        "directory layout",
+        "Media partition",
+        "non-Media partition",
+        "staging locations",
+        "OS images",
+      
+  "DriverPacks",
+        "Automate content"
+      ],
+      "key_content": [
+        "Complete workspace directory structure",
+        "Template to workspace derivation process",
+        "Media vs non-Media partition strategy",
+        "FAT32 4GB ISO limitation handling",
+        "OSDCloud runtime content organization"
+      ]
+    },
+    {
+    
+   "id": "T02",
+      "title": "Edit-OSDCloudWinPE Complete Transformation Reference",
+      "filename": "T02_Edit-OSDCloudWinPE_Complete_Transformation_Reference.md",
+      "metadata_file": "T02_metadata.json",
+      "section_path": "OSDCloud v1 > Transformations > Edit-OSDCloudWinPE",
+      "doc_type": "transformation_reference",
+      "topics": [
+        "startup flow modifications",
+        "winpeshl.ini",
+        "startnet.cmd",
+        "PowerShell configuration",
+        "Profile.ps1",
+    
+     "ExecutionPolicy",
+        "network stack initialization",
+        "Wi-Fi enablement",
+        "wlansvc",
+        "driver injection",
+        "registry modifications",
+        "OSD module integration",
+        "autostart behavior",
+        "branding",
+        "wallpaper",
+        "logging"
+      ],
+  
+     "key_content": [
+        "15+ transformation categories documented",
+        "Complete startup flow before/after comparison",
+        "Network and Wi-Fi enablement process",
+        "All registry modifications with purposes",
+        "PowerShell profile and module integration",
+        "MDT equivalents for each transformation"
+      ]
+    },
+    {
+      "id": "T03",
+   
+    "title": "WinPE Boot Flow Before and After OSDCloud",
+      "filename": "T03_WinPE_Boot_Flow_Before_and_After_OSDCloud.md",
+      "metadata_file": "T03_metadata.json",
+      "section_path": "OSDCloud v1 > Transformations > Boot Flow Analysis",
+      "doc_type": "comparison_analysis",
+      "topics": [
+        "boot sequence",
+        "standard ADK boot flow",
+        "OSDCloud-modified boot flow",
+        "network initialization timing",
+        
+"PowerShell auto-launch",
+        "critical path analysis",
+        "performance comparison",
+        "boot-to-ready timing"
+      ],
+      "key_content": [
+        "8-stage boot flow comparison",
+        "Timing differences per stage",
+        "Network availability: 60-90s (ADK) vs 15-25s (OSDCloud)",
+        "Total boot-to-ready: 90s (ADK) vs 30s (OSDCloud)",
+        
+"Critical timing improvements"
+      ]
+    },
+    {
+      "id": "T04",
+      "title": "MDT Implementation Mapping for OSDCloud Transformations",
+      "filename": 
+"T04_MDT_Implementation_Mapping_for_OSDCloud_Transformations.md",
+      "metadata_file": "T04_metadata.json",
+      "section_path": "OSDCloud v1 > Transformations > MDT Implementation",
+      "doc_type": "implementation_guide",
+      "topics": [
+        "MDT equivalents",
+        "deployment share configuration",
+     
+    "Extra Files directory",
+        "Bootstrap.ini",
+        "CustomSettings.ini",
+        "startnet.cmd modifications",
+        "Wi-Fi support in MDT",
+        "driver injection",
+        "registry modifications",
+        "implicit behaviors",
+        "zero-touch configuration"
+      ],
+      "key_content": [
+        "25+ OSDCloud ? MDT transformation mappings",
+        "Complete deployment share configuration",
+        "Step-by-step PowerShell implementation",
+        "Extra Files structure and usage",
+        "Wi-Fi enablement in MDT (not automatic)",
+        "Implicit behaviors OSDCloud automates",
+        "Full MDT task sequence equivalent"
+      ]
+    },
+    {
+      "id": "T05",
+      "title": "Deterministic Transformation Tables",
+      "filename": "T05_Deterministic_Transformation_Tables.md",
+      "metadata_file": "T05_metadata.json",
+      "section_path": "OSDCloud v1 > Transformations > Reference Tables",
+      "doc_type": "reference_tables",
+      "topics": [
+        "file modifications",
+        "system changes",
+        "registry modifications",
+        "boot flow table",
+        "network enablement steps",
+        "PowerShell configuration",
+ 
+        "driver injection comparison",
+        "directory structure mapping",
+        "ISO boot partition layout"
+      ],
+      "key_content": [
+        "12 comprehensive transformation tables",
+        "Table 1: File/System Change ? Purpose ? MDT Equivalent",
+        "Table 2: WinPE Boot Flow Transformation",
+        "Table 3: Network & Wi-Fi Enablement Steps",
+        "Table 4: Registry Modifications Complete Reference",
+        "Table 5: PowerShell Configuration Elements",
+        "Table 6: Driver Injection Comparison",
+        "Table 7: Directory Structure Mapping",
+        "Table 8: ISO Boot Partition Layout"
+      ]
+  
+   }
+  ],
+  "transformation_categories": [
+    "Workspace Architecture",
+    "Startup Flow",
+    "PowerShell Configuration",
+    "Network Stack",
+    "Wi-Fi Enablement",
+    "Driver Injection",
+    "Registry Modifications",
+    "OSD Module Integration",
+    "Autostart Behavior",
+    "Branding",
+    "Logging",
+    "Boot Flow Analysis",
+    "MDT Implementation",
+    "Reference Tables"
+  ],
+  "use_cases": [
+    "AI agent MDT/ADK replication",
+    "Understanding OSDCloud internals",
+    "Custom WinPE build processes",
+    "Troubleshooting OSDCloud transformations",
+    "Implementing OSDCloud features in existing frameworks"
+  ]
+}
